@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Alerts</h2>
+  <p> Blesfem Exam Pin Order Portal</p>
+  {% for waec in waecs %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ waec1.user.username }} has purchase Waec Pin to this Email {{ waec.Email }}  at this time {{ waec.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for neco in necos %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ neco2.user.username }} has purchase Neco Pin to this Email  {{ neco.Email }}  at this time {{ neco.timestamp }}
+  </div>
+{% endfor %}        
+     
+</div>
+
+</body>
+</html>

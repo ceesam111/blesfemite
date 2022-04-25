@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Alerts</h2>
+  <p> Blesfem MTN Data Order Portal</p>
+  {% for mtn1 in mtn1s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn1.user.username }} has purchase MTN 500MB to this Mobile Number {{ mtn1.Mobile_Number }}  at this time {{ mtn1.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for mtn2 in mtn2s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn2.user.username }} has purchase MTN 2GB SME to this Mobile Number {{ mtn2.Mobile_Number }}  at this time {{ mtn2.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for mtn3 in mtn3s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn3.user.username }} has purchase MTN 1GB SME to this Mobile Number {{ mtn3.Mobile_Number }}  at this time {{ mtn3.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for mtn4 in mtn4s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn4.user.username }} has purchase MTN 3GB SME to this Mobile Number {{ mtn4.Mobile_Number }}  at this time {{ mtn4.timestamp }}
+  </div>
+{% endfor %}   
+
+{% for mtn5 in mtn5s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn5.user.username }} has purchase MTN 4GB to this Mobile Number {{ mtn5.Mobile_Number }}  at this time {{ mtn5.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for mtn6 in mtn6s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn6.user.username }} has purchase MTN 5GB SME to this Mobile Number {{ mtn6.Mobile_Number }}  at this time {{ mtn6.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for mtn7 in mtn7s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn7.user.username }} has purchase MTN 10GB SME to this Mobile Number {{ mtn7.Mobile_Number }}  at this time {{ mtn7.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for mtn8 in mtn8s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn8.user.username }} has purchase MTN 1GB WEEKLY DIRECT  to this Mobile Number {{ mtn8.Mobile_Number }}  at this time {{ mtn8.timestamp }}
+  </div>
+{% endfor %}    
+
+{% for mtn9 in mtn9s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn9.user.username }} has purchase MTN 1.5GB Monthly Direct to this Mobile Number {{ mtn9.Mobile_Number }}  at this time {{ mtn9.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for mtn10 in mtn10s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn10.user.username }} has purchase MTN 2GB MONTHLY DIRECT to this Mobile Number {{ mtn10.Mobile_Number }}  at this time {{ mtn10.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for mtn11 in mtn11s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ mtn11.user.username }} has purchase MTN 20GB WEEKLY DIRECT to this Mobile Number {{ mtn11.Mobile_Number }}  at this time {{ mtn11.timestamp }}
+  </div>
+{% endfor %}    
+      
+</div>
+
+</body>
+</html>

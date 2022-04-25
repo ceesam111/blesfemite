@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- section 1 for standards-->
+           {% for standard in standards %}
+<section id="best-features" class="text-center">
+              <h2 class="mb-5 mt-5 font-weight-bold" style="color:#00FA9A;">Dive Into Learning</h2>
+              <!-- class row for description-->
+              <div class="row d-flex justify-content-center mb-4">
+                <!-- class column -->
+                <div class="col-md-8">
+                  <p class="grey-text">In essence, if we want to direct our lives, we must take control of our consistent actions. It's not what we do once in a while that shapes our lives, but what we do consistently.</p>
+                </div>
+              </div>
+              <!-- class row2 for cards -->
+             <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href=""> {{standard.name}}</a></h4>
+              <p>{{ standard.description }}</p>
+                {% if user.is_authenticated %}
+                <a href="{% url 'curriculum:subject_list' slug=standard.slug %}" class="btn btn-primary" style="background-color: 
+#00FA9A">Let's get started</a>
+                 {%else%}
+                 <p>Register or login to start learning</p>
+                 <a href="{% url 'user_login' %}" class="btn btn-primary" style="background-color: 
+#00FA9A;">Login</a>
+                  <a href="{% url 'register' %}" class="btn btn-primary" style="background-color:
+#00FA9A  ;">Register</a>
+                 {%endif%}
+            </div>
+          </div>           
+      </div>
+    </section><!-- End Services Section -->
+     {% endfor %} 
+{%endblock%}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load socialaccount %}
+
+{% block content %}
+<main role="main" class="container col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
+    <br>
+    <h1 class="text-center">Sign In</h1>
+    <br> 
+    <a href="{% provider_login_url 'google' process='login' %}" class="btn btn-outline-dark btn-block">
+      <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+      Sign In with Google
+    </a>
+    <div class="or-seperator"><i>or</i></div>    
+<div class="row d-flex justify-content-center mb-4">
+                <form action="{% url 'user_login' %}" method="post">
+                  <div class="form-group">
+                  {% csrf_token %}
+                  <div class="col-md-12">
+                    <div class="row">
+                  <label for="username">Username:</label>
+                  <input type="text" name="username" placeholder="Username" class="form-control">
+                  <label for="password">Password:</label>
+                  <input type="password" name="password" class="form-control">
+                  </div>
+                  <div class="row justify-content-center">
+                      <input type="submit" value="Login" class="btn btn-success btn-lg mt-3">
+                  </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+             <br>                 
+             <p>Don't have an account? Please <a href="{% url 'register' %}">register</a></p>
+             </br>
+  </main>
+{%endblock%}

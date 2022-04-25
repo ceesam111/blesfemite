@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Alerts</h2>
+  <p> Blesfem Airtel Data Order Portal</p>
+  {% for airtel1 in airtel1s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ airtel1.user.username }} has purchase Airtel 750MB to this Mobile Number {{ airtel1.Mobile_Number }}  at this time {{ airtel1.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for airtel2 in airtel2s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ airtel2.user.username }} has purchase Airtel 2GB  to this Mobile Number {{ airtel2.Mobile_Number }}  at this time {{ airtel2.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for airtel3 in airtel3s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ airtel3.user.username }} has purchase Airtel 3GB SME to this Mobile Number {{ airtel3.Mobile_Number }}  at this time {{ airtel3.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for airtel4 in airtel4s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ airtel4.user.username }} has purchase Airtel 3GB SME to this Mobile Number {{ airtel4.Mobile_Number }}  at this time {{ airtel4.timestamp }}
+  </div>
+{% endfor %}   
+
+{% for airtel5 in airtel5s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ airtel5.user.username }} has purchase Airtel 6GB to this Mobile Number {{ airtel5.Mobile_Number }}  at this time {{ airtel5.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for airtel6 in airtel6s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ airtel6.user.username }} has purchase Airtel 10GB to this Mobile Number {{ airtel6.Mobile_Number }}  at this time {{ airtel6.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for airtel7 in airtel7s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ airtel7.user.username }} has purchase Airtel 20GB to this Mobile Number {{ airtel7.Mobile_Number }}  at this time {{ airtel7.timestamp }}
+  </div>
+{% endfor %}    
+          
+</div>
+
+</body>
+</html>
+

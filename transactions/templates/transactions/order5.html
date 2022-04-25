@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Alerts</h2>
+  <p> Blesfem DSTV Order Portal</p>
+  {% for dstv1 in dstv1s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ dstv1.user.username }} has purchase Dstv PADI to this IUC {{ dstv1.Smart_Card_Number_or_IUC }}  at this time {{ dstv1.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for dstv2 in dstv2s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ dstv2.user.username }} has purchase Dstv Xtraview to this IUC {{ dstv2.Smart_Card_Number_or_IUC  }}  at this time {{ dstv2.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for dstv3 in dstv3s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ dstv3.user.username }} has purchase Dstv Asian Add on to this IUC {{ dstv3.Smart_Card_Number_or_IUC }}  at this time {{ dstv3.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for dstv4 in dstv4s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ dstv4.user.username }} has purchase Dstv French Bouguet to this IUC {{ dstv4.Smart_Card_Number_or_IUC  }}  at this time {{ dstv4.timestamp }}
+  </div>
+{% endfor %}   
+
+{% for dstv5 in dstv5s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ dstv5.user.username }} has purchase Dstv Compact Plus French to this IUC {{ dstv5.Smart_Card_Number_or_IUC  }}  at this time {{ dstv5.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for dstv6 in dstv6s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ dstv6.user.username }} has purchase Dstv Confam to this  IUC {{ dstv6.Smart_Card_Number_or_IUC  }}  at this time {{ dstv6.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for dstv7 in dstv7s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ dstv7.user.username }} has purchase Dstv Yanga to this IUC {{ dstv7.Smart_Card_Number_or_IUC }}  at this time {{ dstv7.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for dstv8 in dstv8s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ dstv8.user.username }} has purchase Dstv Premium to this IUC {{ dstv8.Smart_Card_Number_or_IUC  }}  at this time {{ dstv8.timestamp }}
+  </div>
+{% endfor %}    
+
+{% for dstv9 in dstv9s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ dstv9.user.username }} has purchase Dstv Conpact Plus to this IUC {{ dstv9.Smart_Card_Number_or_IUC  }}  at this time {{ dstv9.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for dstv10 in dstv10s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ dstv10.user.username }} has purchase Dstv Compact Plus Asian Add On to this IUC {{ dstv10.Smart_Card_Number_or_IUC  }}  at this time {{ dstv10.timestamp }}
+  </div>
+{% endfor %}    
+
+ 
+      
+</div>
+
+</body>
+</html>

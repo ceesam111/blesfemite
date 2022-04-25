@@ -1,0 +1,86 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} {{lessons.name}} {% endblock %}
+
+
+{% block content %}
+
+<section class="text-center">
+    <h2 class="mb-0 mt-5 font-weight-bold" style="color:#00FA9A;">Video Details</h2>
+    </br>
+    <div class="row d-flex justify-content-center mb-3">
+      <blockquote class="blockquote mt-0">
+        <footer class="blockquote-footer">Created on {{lessons.created_at}} by <cite title="Source Title">{{lessons.created_by}}</cite></footer>
+        </blockquote>
+    </div>
+    <!-- video -->
+   <div class="embed-responsive embed-responsive-1by1"> <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ lessons.youtube_video }}" allowfullscreen></iframe> </div>   
+            </br>
+            <a href=" https://www.safestgatetocontent.com/dk5t0e2gmd?key=270257732743cdbddced954079a084e6 "><button   type="button"  class= "btn btn-primary">Suscribe👉 </button></a>
+
+            <script src="https://apis.google.com/js/platform.js"></script>
+
+            <div class="g-ytsubscribe" data-channelid="UCkFrGfatoI6rN0UvxFJtgqg" data-layout="default" data-count="default"></div>
+
+
+             <a href=" https://www.safestgatetocontent.com/dk5t0e2gmd?key=270257732743cdbddced954079a084e6 "><button   type="button"  class= "btn btn-primary">Earn coin💰</button></a>
+            </br>
+            </br>
+           <script type="text/javascript"> 	atOptions = { 		'key' : 'e520843bd0ff35200f5e074a9e1ae4fe', 		'format' : 'iframe', 		'height' : 250, 		'width' : 300, 		'params' : {} 	}; 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformats.com/e520843bd0ff35200f5e074a9e1ae4fe/invoke.js"></scr' + 'ipt>'); </script>
+           </br>    
+<!-- Comments section -->
+<section >
+    <h2 class="mb-4 mt-5 font-weight-bold" style="color:#00FA9A;">Questions And Queries</h2>
+    <h4 class="mt-2 font-weight-bold" style="color:#00FA9A;">Post your comment or question below:</h4>
+    <br><br>
+    <div class="container row">
+      <div class="col-md-6">
+                              <form method="post">
+                                    <div class="form-group">
+                                    {% csrf_token %}
+                                    {{form|crispy}}
+                                     </br>
+                                    <input type="submit" name="form" value="Add Comment" class="btn btn-primary btn-sm">
+                                    </div>
+                              </form>
+      </div>
+    </div>
+    <div class="row">
+      {% for comment in lessons.comments.all %}
+      <div class="col-md-8 mt-2 mb-2">
+                      <div class="media border p-3">
+                          <img src="{% static 'Images/user_avatar.png' %}" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+                          <div class="media-body">
+                                    <h4>{{comment.author}} <small><i>Posted on {{comment.date_added}}</i></small></h4>
+                                    <p>{{comment.body}}</p>
+                            {% for reply in comment.replies.all %}
+                                        <div class="media p-3">
+                                                <img src="{% static 'Images/user_avatar.png' %}" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+                                        <div class="media-body">
+                                                <h5>{{reply.author}} <small><i>Posted on {{reply.date_added}}</i></small></h5>
+                                                <p>{{reply.reply_body}}</p>
+                                          </div>
+                                        </div>
+                            {% endfor %}
+                            <!-- form to post reply -->
+                            <form method="post">
+                                  <input type="hidden" name="comment.id" value="{{comment.id}}">
+                                  <input type="hidden" name="comment.comm_name" value="{{comment.comm_name}}">
+                                  {% csrf_token %}
+                                  {{form2.as_p}}
+                                  <input type="submit" name="form2" value="Add Reply" class="btn btn-warning btn-sm">
+                            </form>
+                          </div>
+                  </div>
+      </div>
+      {% endfor %}
+    </div>
+
+
+</section>
+
+{%endblock%}

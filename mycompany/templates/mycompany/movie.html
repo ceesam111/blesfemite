@@ -1,0 +1,55 @@
+{% extends 'navbar.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+
+{% block content %}
+          </br>
+          <img src="  https://giffiles.alphacoders.com/591/59180.gif"  class="img-fluid" alt="Responsive image"></a>
+         
+          </br>
+           <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Channels</h2>
+          <p>what would you like to know more about, cryptocurrency, programming, animation, education. dive into any of your channels below, make sure you suscribe, comment,like and turn on notifications to recieve crypto cashback in your wallet</p>
+        </div>     
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-top"> top</li>
+              <li data-filter=".filter-middle"> middle</li>
+              <li data-filter=".filter-lower"> lower</li>
+            </ul>
+          </div>
+        </div>
+        </br>
+        
+        {% for movie in movies %}
+        <div class="row portfolio-container">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ movie.category }}"><a href= "#">
+            <iframe width="340" height="180" src="https://www.youtube.com/embed/{{ movie.link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </br>
+            <a href="https://youtu.be/{{ movie.suscribe }}"><button   type="button"  class= "btn btn-primary">Suscribe✨</button></a>
+
+            <a href="https://youtu.be/{{ movie.like }}"><button   type="button"  class= "btn btn-primary">Like💞</button></a>
+
+             <a href="https://youtu.be/{{ movie.bonus }}"><button   type="button"  class= "btn btn-primary">Earn coin💰</button></a>
+
+            <div class="portfolio-info">   
+              <p>thank you for supporting us!</p>       
+            </div>
+            </br>
+            
+            <script type="text/javascript"> 	atOptions = { 		'key' : 'e520843bd0ff35200f5e074a9e1ae4fe', 		'format' : 'iframe', 		'height' : 250, 		'width' : 300, 		'params' : {} 	}; 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformats.com/e520843bd0ff35200f5e074a9e1ae4fe/invoke.js"></scr' + 'ipt>'); </script>
+          </div>        
+        </div>
+        </br>
+        
+        {% endfor %}
+    </section><!-- End Portfolio Section -->  {%endblock%}

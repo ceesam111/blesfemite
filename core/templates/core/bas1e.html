@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BLESFEM VTU Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Presento - v3.7.0
+  * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="index.html">BLESFEM<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+         {% if user.is_authenticated %}
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Airtime</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'transactions:airtime1' %} ">MTN VTU Airtime</a></li>
+              <li><a href="{% url 'transactions:airtime2' %}  ">GLO VTU Airtime</a></li>
+              <li><a href="{% url 'transactions:airtime4' %} ">AIRTEL VTU AIRTIME</a></li>
+              <li><a href="{% url 'transactions:airtime5' %}">MTN AWUF AIRTIME</a></li>
+              <li><a href=" {% url 'transactions:airtime6' %} ">MTN SHARE N SELL AIRTIME</a></li>
+            </ul>
+          </li>                
+         <li class="dropdown"><a href="#"><span>DATA BUNDLE</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>               
+              <li class="dropdown"><a href="#"><span>BUY DATA</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="#"><span>MTN</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  {% for mtn in mtns %}
+                  <li><a href=" {% url 'transactions:mtn1' %}">MTN SME DATA 500MB/month #{{ mtn.A_500MB_SME }}</a></li>
+                  <li><a href="{% url 'transactions:mtn2' %} ">MTN SME DATA 1GB/month #{{ mtn.A_1GB_SME }} </a></li>
+                  <li><a href=" {% url 'transactions:mtn3' %}">MTN SME DATA 2GB/month #{{ mtn.A_2GB_SME }} </a></li>
+                  <li><a href="  {% url 'transactions:mtn4' %}">MTN SME DATA 3GB/month #{{ mtn.A_3GB_SME }} </a></li>
+                  <li><a href=" {% url 'transactions:mtn5' %}">MTN SME DATA 4GB/month #{{ mtn.A_4GB_SME }} </a></li>
+                  <li><a href="  {% url 'transactions:mtn6' %}">MTN SME DATA 5GB/month #{{ mtn.A_5GB_SME }}</a></li>
+                  <li><a href="  {% url 'transactions:mtn7' %}">MTN SME DATA 10GB/month #{{ mtn.A_10GB_SME }}</a></li>
+                  <li><a href="  {% url 'transactions:mtn8' %}">MTN 1GB/WEEKLY DIRECT (GIFTING) #{{ mtn.A_1GB_WEEKLY_DIRECT}} </a></li>
+                  <li><a href="  {% url 'transactions:mtn8' %}">MTN 1.5GB/30 Days DIRECT (GIFTING) (#970)</a></li>
+                  <li><a href="{% url 'transactions:mtn9' %} ">MTN 2GB/30 Days DIRECT (GIFTING) #{{ mtn.A_2GB_MONTHLY_DIRECT }}</a></li>
+                  <li><a href="{% url 'transactions:mtn10' %}  "> MTN 20GB/WEEKLY DIRECT (GIFTING) #{{ mtn.A_20GB_MONTHLY_DIRECT }}</a></li>
+                {% endfor %}
+                </ul>
+                </li>
+                  <li class="dropdown"><a href="#"><span>GLO</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  {% for glo in glos %}
+                  <li><a href=" {% url 'transactions:glo1' %}">GLO DATA BUNDLE 50MB #{{ glo.A_50MB }} </a></li>
+                  <li><a href=" {% url 'transactions:glo2' %}"> GLO DATA BUNDLE 150MB #{{ glo.A_150MB }} </a></li>
+                  <li><a href=" {% url 'transactions:glo3' %}">GLO DATA BUNDLE 350MB #{{ GLO.A_350MB }} </a></li>
+                  <li><a href=" {% url 'transactions:glo4' %}"> GLO DATA  BUNDLE 2.9GB #{{ glo.A_2_POINT_9GB }}  </a></li>
+                  <li><a href=" {% url 'transactions:glo5' %}"> GLO DATA BUNDLE 4.1GB #{{ glo.A_4_POINT_1GB }}</a></li>
+                  <li><a href=" {% url 'transactions:glo6' %}">GLO DATA BUNDLE 5.8GB #{{ glo.A_5_POINT_8GB }}  </a></li>
+                  <li><a href="  {% url 'transactions:glo7' %}"> GLO DATA BUNDLE 7.7GB #{{ glo.A_7_POINT_7GB }} </a></li>
+                  <li><a href="  {% url 'transactions:glo8' %}">GLO DATA BUNDLE 10GB #{{ glo.A_10GB }}</a></li>
+                  <li><a href="  {% url 'transactions:glo9' %}"> GLO DATA BUNDLE 13.75GB #{{ glo.A_13_POINT_75GB }} </a></li>
+                  <li><a href="  {% url 'transactions:glo10' %}"> GLO DATA BUNDLE 18.25GB #{{ glo.A_18_POINT_25GB }} </a></li>
+                 {% endfor %}                       
+                </ul>
+                </li>
+                  <li class="dropdown"><a href="#"><span>AIRTEL</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  {% for airtel in airtels %}
+                  <li><a href=" {% url 'transactions:airtel1' %}">AIRTEL DATA BUNDLE 750MB #{{ airtel.A_750MB }}</a></li>
+                  <li><a href="  {% url 'transactions:airtel2' %}"> AIRTEL DATA BUNDLE 2GB #{{ airtel.A_2GB }} </a></li>
+                  <li><a href="  {% url 'transactions:airtel3' %}">AIRTEL DATA BUNDLE 3GB #{{ airtel.A_3GB }} </a></li>
+                  <li><a href="  {% url 'transactions:airtel4' %}">AIRTEL DATA BUNDLE 4GB #{{ airtel.A_4GB }} </a></li>
+                  <li><a href=" {% url 'transactions:airtel5' %}"> AIRTEL DATA BUNDLE 6GB #{{ airtel.A_6GB }}</a></li>
+                  <li><a href="  {% url 'transactions:airtel6' %}"> AIRTEL DATA BUNDLE 10GB #{{ airtel.A_10GB }}</a></li>
+                  <li><a href="  {% url 'transactions:airtel7' %}">AIRTEL DATA BUNDLE 20GB #{{ airtel.A_20GB }}</a></li>
+                  <li><a href="  {% url 'transactions:airtel8' %}"> AIRTEL DATA BUNDLE 40GB #{{ airtel.A_40GB }} </a></li>
+                {% endfor %}
+                </ul>                                
+             </li>
+             </ul>
+             </li>
+             </ul>
+           </li>
+          <li class="dropdown"><a href="#"><span>DSTv</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                 {% for dstv in dstvs %}
+                  <li><a href=" {% url 'transactions:dstv1' %}">PADI #{{ dstv.PADI }}</a></li>
+                  <li><a href="  {% url 'transactions:dstv2' %}">XTRAVIEW #{{ dstv.XTRAVIEW }}</a></li>
+                  <li><a href=" {% url 'transactions:dstv3' %}">ASIAN ADD ON #{{ dstv.ASIAN_ADDON }}</a></li>
+                  <li><a href=" {% url 'transactions:dstv4' %}">  FRENCH_BOUGUET #{{ dstv.FRENCH_BOUGUET }} </a></li>
+                  <li><a href="{% url 'transactions:dstv5' %}">COMPACT PLUS FRENCH #{{ dstv.COMPACT_PLUS_FRENCH }}</a></li>
+                  <li><a href=" {% url 'transactions:dstv6' %}"> CONFAM #{{ dstv.CONFAM }}</a></li>
+                  <li><a href="  {% url 'transactions:dstv7' %}">YANGA #{{ dstv.YANGA }}</a></li>
+                  <li><a href="  {% url 'transactions:dstv8' %}">PREMIUM #{{ dstv.PREMIUM }}</a></li>
+                  <li><a href="  {% url 'transactions:dstv9' %}">COMPACT PLUS #{{ dstv.CONPACT_PLUS }} </a></li>
+                  <li><a href=" {% url 'transactions:dstv10' %}">COMPACT PLUS ASIAN ADD ON #{{ dstv.COMPACT_PLUS_ASIAN_ADDON }} </a></li>
+                {% endfor %}
+                </ul>
+                </li> 
+         <li class="dropdown"><a href="#"><span>GOTv</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  {% for gotv in gotvs %}
+                  <li><a href=" {% url 'transactions:gotv1' %}"> JOLLI #{{ gotv.JOLLI }}</a></li>
+                  <li><a href=" {% url 'transactions:gotv2' %}">SMALLIE #{{ gotv.SMALLIE }}</a></li>
+                  <li><a href=" {% url 'transactions:gotv3' %}">LITE QUARTERLY #{{ gotv.LITE_QUARTERLY }}</a></li>
+                  <li><a href=" {% url 'transactions:gotv4' %}">LITE YEARLY #{{ gotv.LITE_YEARLYLY }}</a></li>
+                  <li><a href="  {% url 'transactions:gotv5' %}">MAX #{{ gotv.MAX }}</a></li>
+                 <li><a href="  {% url 'transactions:gotv6' %}">JINJA #{{ gotv.JINJA }}</a></li>
+                {% endfor %}
+                </ul>
+                
+                </li>                     
+         <li class="dropdown"><a href="#"><span>Startimes</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  {% for startime in startimes %}
+                  <li><a href=" {% url 'transactions:startime1' %}">SMART 1MONTH #{{ startime.SMART_1MONTH }}</a></li>
+                  <li><a href=" {% url 'transactions:startime2' %}">BASIC 1MONTH #{{ startime.BASIC_1MONTH }}</a></li>
+                  <li><a href="  {% url 'transactions:startime3' %}"> CLASSIC 1MONTH #{{ startime.CLASSIC_1MONTH }}</a></li>
+                  <li><a href="  {% url 'transactions:startime4' %}"> NOVA 1MONTH #{{ startime.NOVA_1MONTH }}</a></li>
+                  <li><a href=" {% url 'transactions:startime5' %}">SMART 1WEEK #{{ startime.SMART_1WEEK }} </a></li>
+                  <li><a href="  {% url 'transactions:startime6' %}"> BASIC 1WEEK #{{ startime.BASIC_1WEEK }}</a></li>
+                  <li><a href="  {% url 'transactions:startime7' %}"> CLASSIC 1WEEK #{{ startime.CLASSIC_1WEEK }}</a></li>
+                  <li><a href="  {% url 'transactions:startime8' %}"> NOVA 1WEEK #{{ startime.NOVA_1WEEK }}</a></li>
+                  <li><a href="  {% url 'transactions:startime9' %}"> SUPER 1WEEK #{{ startime.SUPER_1WEEK }}</a></li>
+                  <li><a href=" {% url 'transactions:startime10' %}">  SMART 1DAY #{{ startime.SMART_1DAY}}</a></li>
+                    <li><a href="  {% url 'transactions:startime11' %}"> BASIC 1DAY #{{ startime.BASIC_1DAY }}</a></li>
+                  <li><a href="  {% url 'transactions:startime12' %}">  CLASSIC 1DAY #{{ startime.CLASSIC_1DAY }}</a></li>
+                  <li><a href="  {% url 'transactions:startime13' %}">  NOVA 1DAY #{{ startime.NOVA_1DAY }}</a></li>
+                 {% endfor %}
+                </ul>
+              
+                </li>     
+        <li class="dropdown"><a href="#"><span>Electricity</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="  {% url 'transactions:elect1' %}">EKO PREPAID</a></li>
+                  <li><a href="  {% url 'transactions:elect2' %}"> IKEJA PREPAID </a></li>
+                  <li><a href="  {% url 'transactions:elect3' %}">IBADAN PREPAID </a></li>
+                  <li><a href=" {% url 'transactions:elect4' %}">ENUGU PREPAID </a></li>
+                  <li><a href=" {% url 'transactions:elect5' %}"> EKO POSTPAID </a></li>
+                  <li><a href=" {% url 'transactions:elect6' %}">IBADAN POSTPAID </a></li>
+                  <li><a href="  {% url 'transactions:elect7' %}"> IKEJA POSTPAID </a></li>
+                  <li><a href="  {% url 'transactions:elect8' %}">ENUGU POSTPAID </a></li>
+                </ul>
+                </li>      
+          <li class="dropdown"><a href="#"><span>WAEC and NECO</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href=" {% url 'transactions:waec' %}"> WAEC #{{ EXAM.WAEC}}</a></li>
+                  <li><a href="  {% url 'transactions:neco' %}"> NECO #{{ EXAM.NECO}} </a></li>
+                </ul>
+                </li>
+          <li class="nav-item  ">
+          <a class="nav-link" href="{% url 'user_logout' %}">Logout</a></li>                 
+      {% endif %}
+          <li class="nav-item ">
+          <a class="nav-link" href="{% url 'user_login' %}">Login</a>
+           </li>
+           <li class="nav-item " >
+           <a class="nav-link" href="{% url 'register' %}">Register</span> </a>
+            </li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="{% url '/contact' ">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      {% if user.is_authenticated %}
+      <a href="#about" class="get-started-btn scrollto">NGN{{ user.userprofileinfo.balance }}</a>
+      {% else %}
+      <a href="{% url 'user_login' %}" class="get-started-btn scrollto">Login</a>
+      {% endif %}
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row">
+        <div class="col-xl-6">
+          <h1>Bettter digital experience with BLESFEM</h1>
+          <h2>We are team of VTU providers  making it cheaper and faster to make your subscription and connect online</h2>
+          <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+ <div class="container">
+        {%block content%}
+        {%endblock%}
+ </div>
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>BLESFEM<span>.</span></h3>
+            <p>
+              19,Idi Aba,Abeokuta<br>
+              Ogun State,  110222<br>
+              Nigeria <br><br>
+              <strong>Phone:</strong> +2349033129189<br>
+              <strong>Phone:</strong> +2348108141473<br>
+              <strong>Email:</strong> sampepper.tech@gmail.com<br>
+              <strong>Email:</strong> solomonsamson53@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>BLESFEM</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
+          Designed by <a href="#">Sampepper</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Alerts</h2>
+  <p> Blesfem GLO Data Order Portal</p>
+  {% for glo1 in glo1s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ glo1.user.username }} has purchase Glo 50MB to this Mobile Number {{ glo1.Mobile_Number }}  at this time {{ glo1.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for glo2 in glo2s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ glo2.user.username }} has purchase Glo 150MB to this Mobile Number {{ glo2.Mobile_Number }}  at this time {{ glo2.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for glo3 in glo3s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ glo3.user.username }} has purchase Glo 350MB to this Mobile Number {{ glo3.Mobile_Number }}  at this time {{ glo3.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for glo4 in glo4s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ glo4.user.username }} has purchase GLO 2.9GB to this Mobile Number {{ mtn4.Mobile_Number }}  at this time {{ mtn4.timestamp }}
+  </div>
+{% endfor %}   
+
+{% for glo5 in glo5s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ glo5.user.username }} has purchase Glo 4.1GB to this Mobile Number {{ glo5.Mobile_Number }}  at this time {{ glo5.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for glo6 in glo6s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ glo6.user.username }} has purchase GLO 5.8GB to this Mobile Number {{ glo6.Mobile_Number }}  at this time {{ glo6.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for glo7 in glo7s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ glo7.user.username }} has purchase MTN 7.7GB SME to this Mobile Number {{ glo7.Mobile_Number }}  at this time {{ glo7.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for glo8 in glo8s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ glo8.user.username }} has purchase Glo 13.75GB to this Mobile Number {{ glo8.Mobile_Number }}  at this time {{ glo8.timestamp }}
+  </div>
+{% endfor %}    
+
+{% for glo9 in glo9s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ glo9.user.username }} has purchase Glo 18.25 to this Mobile Number {{ glo9.Mobile_Number }}  at this time {{ glo9.timestamp }}
+  </div>
+{% endfor %}
+
+        
+</div>
+
+</body>
+</html>

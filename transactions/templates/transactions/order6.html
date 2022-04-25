@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Alerts</h2>
+  <p> Blesfem GOtv Order Portal</p>
+  {% for gotv1 in gotv1s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ gotv1.user.username }} has purchase Gotv JOLLI to this IUC {{ gotv1.Smart_Card_Number_or_IUC }}  at this time {{ gotv1.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for gotv2 in gotv2s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ gotv2.user.username }} has purchase Gotv Smallie to this IUC {{ gotv2.Smart_Card_Number_or_IUC  }}  at this time {{ gotv2.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for gotv3 in gotv3s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ gotv3.user.username }} has purchase Gotv Lite Quarterly to this IUC {{ gotv3.Smart_Card_Number_or_IUC }}  at this time {{ gotv3.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for gotv4 in gotv4s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ gotv4.user.username }} has purchase Gotv Lite Yearly to this IUC {{ gotv4.Smart_Card_Number_or_IUC  }}  at this time {{ gotv4.timestamp }}
+  </div>
+{% endfor %}   
+
+{% for gotv5 in gotv5s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ gotv5.user.username }} has purchase Gotv Max to this IUC {{ gotv5.Smart_Card_Number_or_IUC  }}  at this time {{ gotv5.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for gotv6 in gotv6s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ gotv6.user.username }} has purchase Gotv Jinja to this  IUC {{ gotv6.Smart_Card_Number_or_IUC  }}  at this time {{ gotv6.timestamp }}
+  </div>
+{% endfor %}    
+      
+</div>
+
+</body>
+</html>

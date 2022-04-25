@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %} Assignment Solution {% endblock %}
+
+{% block content %}
+<section class="text-center mt-5">
+              <h2 class="mb-5 font-weight-bold" style="color:#00FA9A;">Do my homework</h2>
+              <!-- class row for description-->
+              <div class="row d-flex justify-content-center mb-4">
+                <!-- class column -->
+                <div class="col-md-8">
+                  <p class="grey-text">Do  you need help solving and getting solution to your assignment? Enter the question or upload a photo of your assignment and let our expert tutor do this at very low cost ranging from #50 to #200 per work. </p>
+                </div>
+              </div>
+</section>
+              <div class="row justify content center">
+              <div class="col-md-12">
+                  <form method="post">
+                    <div class="form-group">
+                      {% csrf_token %}
+                      {{form|crispy}}
+
+             </br>
+                      <input type="submit" value="Submit Response" class="btn btn-success btn-lg btn-block">
+                    </div>
+                  </form>
+              </div>
+              </div>
+            
+              </br>
+
+{% endblock %}

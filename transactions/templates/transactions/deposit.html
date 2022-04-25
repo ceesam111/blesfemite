@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+</br>
+   <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Deposit</h2>
+          <p>Please use your email below to fill the form, the email will be use as your account number</p>
+         <p>Email: {{ request.user.email }}</p>
+        </div> 
+
+        <iframe src="https://paystack.com/pay/paragon
+" height='600px' width='340px'></iframe>
+
+   </section>
+ {%endblock%}

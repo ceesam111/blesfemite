@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    </section><!-- End About Us Section -->
+    {% for lesson in subjects.lessons.all %} 
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 class="mb-5 mt-5 font-weight-bold" style="color:#00FA9A;">Dive Deeper</h2>
+         <p class="grey-text">Hope is important because it can make the present moment less difficult to bear. If we believe that tomorrow will be better, we can bear a hardship today.  </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">Chapter-{{lesson.position}}: {{lesson.name}}</a></h4>  
+                 <a href="{% url 'curriculum:lesson_detail' slug=lesson.slug  subject=subjects.slug standard=lesson.Standard.slug %}" class="btn btn-primary" style="background-color: 
+#00FA9A">Get Lectures</a>               
+            </div>
+          </div>           
+      </div>
+      </br>
+      <script type="text/javascript"> 	atOptions = { 		'key' : 'e520843bd0ff35200f5e074a9e1ae4fe', 		'format' : 'iframe', 		'height' : 250, 		'width' : 300, 		'params' : {} 	}; 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformats.com/e520843bd0ff35200f5e074a9e1ae4fe/invoke.js"></scr' + 'ipt>'); </script>
+    </br>
+    </section><!-- End Services Section -->
+   {% endfor %}
+{%endblock%}

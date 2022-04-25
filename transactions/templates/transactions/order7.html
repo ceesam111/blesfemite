@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Alerts</h2>
+  <p> Blesfem STARTIME Order Portal</p>
+  {% for start1 in start1s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start1.user.username }} has purchase Startime Smart Monthly to this IUC {{ start1.Smart_Card_Number_or_IUC }}  at this time {{ start1.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for start2 in start2s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start2.user.username }} has purchase Startime Basic Monthly to this IUC {{ start2.Smart_Card_Number_or_IUC  }}  at this time {{ start2.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for start3 in start3s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start3.user.username }} has purchase Startime Classic Monthly to this IUC {{ start3.Smart_Card_Number_or_IUC }}  at this time {{ start3.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for start4 in start4s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start4.user.username }} has purchase Startime Nova Monthly to this IUC {{ start4.Smart_Card_Number_or_IUC  }}  at this time {{ start4.timestamp }}
+  </div>
+{% endfor %}   
+
+{% for start5 in start5s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start5.user.username }} has purchase  Startime Smart Weekly to this IUC {{ start5.Smart_Card_Number_or_IUC  }}  at this time {{ start5.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for start6 in start6s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start6.user.username }} has purchase Startime Basic Weekly to this  IUC {{ start6.Smart_Card_Number_or_IUC  }}  at this time {{ start6.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for start7 in start7s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start7.user.username }} has purchase Startime Classic Weekly to this IUC {{ start7.Smart_Card_Number_or_IUC }}  at this time {{ start7.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for start8 in start8s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start8.user.username }} has purchase Startime Nova Weekly to this IUC {{ start8.Smart_Card_Number_or_IUC  }}  at this time {{ start8.timestamp }}
+  </div>
+{% endfor %}    
+
+{% for start9 in start9s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start9.user.username }} has purchase Startime Smart Day to this IUC {{ start9.Smart_Card_Number_or_IUC  }}  at this time {{ start9.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for start10 in start10s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start10.user.username }} has purchase Startime Basic 1Day to this IUC {{ start10.Smart_Card_Number_or_IUC  }}  at this time {{ start10.timestamp }}
+  </div>
+{% endfor %}    
+
+{% for start11 in start11s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start11.user.username }} has purchase Startime Classic 1Day to this IUC {{ start11.Smart_Card_Number_or_IUC  }}  at this time {{ start11.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for start12 in start12s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ start12.user.username }} has purchase Startime Nova 1Day to this IUC {{ start12.Smart_Card_Number_or_IUC  }}  at this time {{ start12.timestamp }}
+  </div>
+{% endfor %}     
+      
+</div>
+
+</body>
+</html>

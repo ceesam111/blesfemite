@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+
+{% block content %}
+
+<section class="text-center mt-4">
+              <h2 class="mb-5 font-weight-bold" style="color:#ff5722;">Registration</h2>
+              <!-- class row for description-->
+              <div class="row d-flex justify-content-center mb-4">
+                <!-- class column -->
+                <div class="col-md-8">
+                  <p class="grey-text">Please make sure that your crypto wallet and  your input data are correct.</p>
+                </div>
+              </div>
+              <div class="row d-flex justify-content-center mb-4">
+
+              </div>
+</section>
+
+  {% if registered %}
+    <h1>Thank you for registering</h1>
+  {% else %}
+      <h3>Fill the form: </h3>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ user_form|crispy }}
+        {{ profile_form|crispy }}
+        <div class="row justify-content-center">
+        <div class="col-md-6">
+       </br>
+        <input type="submit" value="Register" class="btn btn-primary btn-block">
+
+        </br>
+
+        </div>
+        </div>
+      </form>
+  {% endif %}
+  {%endblock%}

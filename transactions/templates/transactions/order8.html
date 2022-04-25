@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Alerts</h2>
+  <p> Blesfem ELECTRICITY Order Portal</p>
+  {% for start1 in start1s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ elect1.user.username }} has purchase Eko Prepaid  to this Meter Number {{ elect1.Meter_Number }}  at this time {{ elect1.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for elect2 in elect2s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ elect2.user.username }} has purchase Ikeja Prepaid to this Meter Number {{ elect2.Meter_Number  }}  at this time {{ elect2.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for elect3 in elect3s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ elect3.user.username }} has purchase Ibadan Prepaid to this meter number {{ elect3.Smart_Card_Number_or_IUC }}  at this time {{ elect3.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for elect4 in elect4s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ elect4.user.username }} has purchase Enugu Prepaid {{ elect4.Meter_Number}}  at this time {{ elect4.timestamp }}
+  </div>
+{% endfor %}   
+
+{% for elect5 in elect5s %}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ elect5.user.username }} has purchase  Ikeja Postpaid to this metee number {{ elect5.Meter_Number }}  at this time {{ elect5.timestamp }}
+  </div>
+{% endfor %}
+
+  {% for elect6 in elect6s %}  
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ elect6.user.username }} has purchase Ibadan Postpaid tot this meter number {{ elect6.Meter_Number  }}  at this time {{ elect6.timestamp }}
+  </div>
+{% endfor %}    
+
+  {% for elect7 in elect7s %}  
+  <div class="alert alert-warning alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ elect7.user.username }} has purchase Eko Postpaid {{ elect7.Meter_Number}}  at this time {{ elect7.timestamp }}
+  </div>
+{% endfor %}    
+    
+ {% for elect8 in elect8s %}     
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> {{ elect8.user.username }} has purchase Enugu Prepaid to this Meter Number {{ elect8.Meter_Number }}  at this time {{ elect8.timestamp }}
+  </div>
+{% endfor %}    
+     
+</div>
+
+</body>
+</html>

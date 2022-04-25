@@ -1,0 +1,495 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+        
+          <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>We are team of creators providing stardand content through our different youtube channels to learn and gain new skills </p>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              you can create account with us  and wait to recieve email from us if your account is approved to start making money on the go!, how to be eligible
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> create an account</li>
+              <li><i class="ri-check-double-line"></i> Like, Suscribe, comment and turn on notification in our cryptocurrency channel with any other two channel to recieve your first crypto </li>
+              <li><i class="ri-check-double-line"></i> invite your friends to create account and complete simple task. minimum invite is 30</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              it is important you watch all the videos in our cryptocurrency channels to be able to setup your account to start recieving your money in crypto. The more you invite,watch videos and complete task, the more your cashback  </p>
+            <a href="#" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>we help to promote your channels and create great content in different areas such as cryptocurrency, education, programming, website designing, agricultural business,graphic designing, animation, electrical and electronics, games , cybersecurity and many more! </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">Cryptocurrency</a></h4>
+              <p>learn about cryptocurrency and how to start making money online in crypto</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">Education</a></h4>
+              <p>Get the best result in examinations, tutorial videos for mathematics, physics, chemistry,English and many more!</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">Programming</a></h4>
+              <p>Ready to learn python, html, css, bootstrap , c++ and many more!</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4><a href="">Website development</a></h4>
+              <p>Become a frontend and backend website or webapp developer, build responsive wesite on the go!</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-slideshow"></i></div>
+              <h4><a href="">Agricultural business</a></h4>
+              <p>Get the best skills and knowledge to start your agricultural business such as fishery, poultry farming, rabbit farming and many more!</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-arch"></i></div>
+              <h4><a href="">Animation</a></h4>
+              <p>learn to start creating your video animation</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Call To Action</h3>
+            <p> Do you have youtube channel with great content, do you need campaign for your product, contact us today!</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Send a message</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="icon-box mt-5 mt-lg-0">
+              <i class="bx bx-receipt"></i>
+              <h4>website development</h4>
+              <p>Get your your business off ground with a responsive website</p>
+            </div>
+            <div class="icon-box mt-5">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Graphics Design</h4>
+              <p>We provide you with the best graphics design</p>
+            </div>
+            <div class="icon-box mt-5">
+              <i class="bx bx-images"></i>
+              <h4>Advertisement</h4>
+              <p>advertise your product on the go!</p>
+            </div>
+            <div class="icon-box mt-5">
+              <i class="bx bx-shield"></i>
+         <img src="" alt=""><h4>content creator</h4>
+              <p>Create content for your product and services</p>
+            </div>
+          </div>
+          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("{% static 'assets/img/features.jpg' %}");'></div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container">
+
+        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="{% static 'assets/img/clients/client-3.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="{% static 'assets/img/clients/client-7.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img src="{% static 'assets/img/clients/client-8.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="text-center title">
+          <h3>What we have achieved so far</h3>
+          <p>Success seems to be connected with action. Successful people keep moving. They make mistakes, but they don't quit.</p>
+        </div>
+
+        <div class="row counters position-relative">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hard Workers</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Channels</h2>
+          <p>what would you like to know more about, cryptocurrency, programming, animation, education. dive into any of your channels below, make sure you suscribe, comment,like and turn on notifications to recieve crypto cashback in your wallet</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app"><a href= "https://youtube.com/channel/UC7uYu1GX40Bg0UG6BM_Ymxw">
+            <img src="{% static 'assets/img/portfolio/p1.gif' %}" class="img-fluid" alt=""></a>
+            <div class="portfolio-info">
+              <h4>Cryptocurrency</h4>
+              <p>App</p>
+              <a href="{% static 'assets/img/portfolio/p1.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="static/assets/img/portfolio/p2.gif" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Education</h4>
+              <p>Web</p>
+              <a href="static/assets/img/portfolio/p2.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="{% static 'assets/img/portfolio/p3.gif' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4> Programming</h4>
+              <p>App</p>
+              <a href="{% static 'assets/img/portfolio/p3.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="{% static 'assets/img/portfolio/p4.gif' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web development</h4>
+              <p>Card</p>
+              <a href="{% static 'assets/img/portfolio/p4.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="{% static 'assets/img/portfolio/p5.gif' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Agricultural business</h4>
+              <p>Web</p>
+              <a href="{% static 'assets/img/portfolio/p5.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="{% static 'assets/img/portfolio/p6.gif' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4> Animation</h4>
+              <p>App</p>
+              <a href="{% static 'assets/img/portfolio/p6.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="{% static 'assets/img/portfolio/p7.gif' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Animated movie</h4>
+              <p>Card</p>
+              <a href="{% static 'assets/img/portfolio/p7.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="{% static 'assets/img/portfolio/p8.gif' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="{% static 'assets/img/portfolio/p8.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="{% static 'assets/img/portfolio/p9.gif' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>community</h4>
+              <p>Web</p>
+              <a href="{% static 'assets/img/portfolio/p9.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <p>Create Campaign for your channels or advertise your product on the go!</p>
+        </div>
+
+        <div class="row">
+          {% for pricetag in pricetags %}
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <h3> {{ pricetag.name }} </h3>
+              <h4><sup>$</sup>{{ pricetag.amount }}<span> / {{ pricetag.duration }} </span></h4>
+              <ul>
+                <li>{{ pricetag.tag_one }}</li>
+                <li> {{ pricetag.tag_two }}</li>
+                <li>{{ pricetag.tag_three }}</li>
+                <li class="{{ pricetag.overlay}} "> {{ pricetag.tag_four }} </li>
+                <li class="{{ pricetag.overlay }} ">{{ pricetag.tag_five }}</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="{{ pricetag.tag_link }}" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Faq Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3>Frequently Asked <strong>Questions</strong></h3>
+              <p>
+    what would you like to know
+              </p>
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">How to start making money? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      Create an account on Vnode  by going to the create account section in the navigation bar, watch videos,suscribe and like  our cryptocurrency channels and invites friends!
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">How to do I recieve my money <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      first watch videos in our cryptocurrency channels to know how to create a wallet, then enter your wallet address in the create account section on Vnode
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">How many friends do i need to invites<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      minimum invites is 30   </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("{% static 'assets/img/faq.jpg' %}");'>&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End Faq Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>To know more about us or our services</p>
+        </div>
+      </div>
+
+      <div>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="container">
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="ri-map-pin-line"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="ri-mail-line"></i>
+                <h4>Email:</h4>
+                <p>sampepper.tech@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="ri-phone-line"></i>
+                <h4>Call:</h4>
+                <p>+234 8108141473</p>
+                <p>+1 0589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  {%endblock%}

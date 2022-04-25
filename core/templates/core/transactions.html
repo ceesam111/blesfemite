@@ -1,0 +1,67 @@
+{% extends 'templates/base.html' %}
+
+{% block title %} Transactions | {{ block.super }}{% endblock title %}
+
+{% block content %}
+{% include "core/messages.html" %}
+   
+    <div class="page-header">
+      <h1 class="text-center"><b>BlockChain</b><br><small>Crypto Ltd.</small></h1>
+    </div>
+    <br/>
+    <br/>
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<video id="video-id"><source src="video.mp4" type="video/mp4" />
+<script>
+    var myFP = fluidPlayer(
+        'video-id',	{
+	"layoutControls": {
+		"controlBar": {
+			"autoHideTimeout": 3,
+			"animated": true,
+			"autoHide": true
+		},
+		"htmlOnPauseBlock": {
+			"html": null,
+			"height": null,
+			"width": null
+		},
+		"autoPlay": true,
+		"mute": false,
+		"allowTheatre": true,
+		"playPauseAnimation": false,
+		"playbackRateEnabled": false,
+		"allowDownload": false,
+		"playButtonShowing": false,
+		"fillToContainer": false,
+		"posterImage": "{% static 'assets/img/clients/ab.png' %}"
+	},
+	"vastOptions": {
+		"adList": [
+			{
+				"roll": "preRoll",
+				"vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=12ddbbda2dd006723639a8ab30e0490f",
+				"adText": ""
+			}
+		],
+		"adCTAText": false,
+		"adCTATextPosition": ""
+	}
+});
+</script>   
+    <br/>
+    <br/>
+    <div class="well">
+    <h5 class="card"><b>Account Balance: </b>{{ userprofileinfo.balance }} Shiva coin</h5>
+    <a class="btn btn-success" href="{% url 'transactions:deposit' %}">Deposit</a>
+    <a class="btn btn-danger" href="{% url 'transactions:withdrawal' %}">Withdraw</a>
+    <br/>
+    <br/>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+{% endblock content %}

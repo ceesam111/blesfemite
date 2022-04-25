@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+{% load crispy_forms_tags %}
+{% block title %} {{ title }} | {{ block.super }}{% endblock title %}
+<br/>
+{% block content %}
+{% include "core/messages.html" %}
+<br/>
+
+ <div class="alert alert-info" role="alert"><h4>Hi {{ request.user.username }}, Your Current Account Balance is  NGN{{user.userprofileinfo.balance}}</h4></div>
+
+<h2>{{ table }}</h2><hr>
+<form method="POST" action="" >
+    {% csrf_token %}
+    {{ form|crispy }}
+    <br/>
+     <h3 class="mb-5 font-weight-bold" style="color:#ff5722;">you will be charged: {{ cost }}</h3>
+    <br/>     
+    <input class="btn btn-primary" type="submit" value='{{ title }}'>
+    <br/>
+</form>
+<br/>
+{% endblock content %}
+
